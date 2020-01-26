@@ -292,11 +292,11 @@ module.exports = (api, options) => {
   })
 
   api.registerCommand('cordova-serve-electron', async args => {
-    return await runServe('ios', args)
+    return await runServe('electron', args)
   })
 
   api.registerCommand('cordova-build-electron', async args => {
-    return await runBuild('ios', args)
+    return await runBuild('electron', args)
   })
 
   api.registerCommand('cordova-serve-ios', async args => {
