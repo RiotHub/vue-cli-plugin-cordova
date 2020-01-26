@@ -9,15 +9,18 @@ const defaultServe = require('./default-serve')
 const defaultModes = {
   'cordova-serve-android': 'development',
   'cordova-build-android': 'production',
-  'cordova-serve-ios': 'development',
-  'cordova-build-ios': 'production',
   'cordova-serve-browser': 'development',
   'cordova-build-browser': 'production',
+  'cordova-serve-electron': 'development',
+  'cordova-build-electron': 'production',
+  'cordova-serve-ios': 'development',
+  'cordova-build-ios': 'production',
   'cordova-serve-osx': 'development',
   'cordova-build-osx': 'production',
-  'cordova-build-only-www-ios': 'production',
   'cordova-build-only-www-android': 'production',
   'cordova-build-only-www-browser': 'production',
+  'cordova-build-only-www-electron': 'production',
+  'cordova-build-only-www-ios': 'production',
   'cordova-build-only-www-osx': 'production',
   'cordova-prepare': 'production'
 }
@@ -288,6 +291,14 @@ module.exports = (api, options) => {
     return await runBuild('android', args)
   })
 
+  api.registerCommand('cordova-serve-electron', async args => {
+    return await runServe('ios', args)
+  })
+
+  api.registerCommand('cordova-build-electron', async args => {
+    return await runBuild('ios', args)
+  })
+
   api.registerCommand('cordova-serve-ios', async args => {
     return await runServe('ios', args)
   })
@@ -304,9 +315,6 @@ module.exports = (api, options) => {
     return await runBuild('osx', args)
   })
 
-  api.registerCommand('cordova-build-only-www-ios', async args => {
-    return await runWWWBuild('ios', args)
-  })
 
   api.registerCommand('cordova-build-only-www-android', async args => {
     return await runWWWBuild('android', args)
@@ -314,6 +322,14 @@ module.exports = (api, options) => {
 
   api.registerCommand('cordova-build-only-www-browser', async args => {
     return await runWWWBuild('browser', args)
+  })
+
+  api.registerCommand('cordova-build-only-www-electron', async args => {
+    return await runWWWBuild('electron', args)
+  })
+
+  api.registerCommand('cordova-build-only-www-ios', async args => {
+    return await runWWWBuild('ios', args)
   })
 
   api.registerCommand('cordova-build-only-www-osx', async args => {
