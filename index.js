@@ -7,22 +7,22 @@ const defaults = require('./defaults')
 const defaultServe = require('./default-serve')
 
 const defaultModes = {
-  'cordova-serve-android': 'development',
   'cordova-build-android': 'production',
-  'cordova-serve-browser': 'development',
   'cordova-build-browser': 'production',
-  'cordova-serve-electron': 'development',
   'cordova-build-electron': 'production',
-  'cordova-serve-ios': 'development',
   'cordova-build-ios': 'production',
-  'cordova-serve-osx': 'development',
-  'cordova-build-osx': 'production',
   'cordova-build-only-www-android': 'production',
   'cordova-build-only-www-browser': 'production',
   'cordova-build-only-www-electron': 'production',
   'cordova-build-only-www-ios': 'production',
   'cordova-build-only-www-osx': 'production',
-  'cordova-prepare': 'production'
+  'cordova-build-osx': 'production',
+  'cordova-prepare': 'production',
+  'cordova-serve-android': 'development',
+  'cordova-serve-browser': 'development',
+  'cordova-serve-electron': 'development',
+  'cordova-serve-ios': 'development',
+  'cordova-serve-osx': 'development'
 }
 
 module.exports = (api, options) => {

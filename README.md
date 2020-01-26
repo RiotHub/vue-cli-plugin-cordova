@@ -28,6 +28,18 @@ $ npm run cordova-serve-android # Development Android
 $ npm run cordova-build-android # Build Android
 $ npm run cordova-build-only-www-android # Build only files to src-cordova
 ```
+Browser
+```sh
+$ npm run cordova-serve-browser # Development Browser
+$ npm run cordova-build-browser # Build Browser
+$ npm run cordova-build-only-www-browser # Build only files to src-cordova
+```
+Electron
+```sh
+$ npm run cordova-serve-electron # Development Electron
+$ npm run cordova-build-electron # Build Electron
+$ npm run cordova-build-only-www-electron # Build only files to src-cordova
+```
 IOS
 ```sh
 $ npm run cordova-serve-ios # Development IOS
@@ -39,12 +51,6 @@ OSX
 $ npm run cordova-serve-osx # Development OSX
 $ npm run cordova-build-osx # Build OSX
 $ npm run cordova-build-only-www-osx # Build only files to src-cordova
-```
-Browser
-```sh
-$ npm run cordova-serve-browser # Development Browser
-$ npm run cordova-build-browser # Build Browser
-$ npm run cordova-build-only-www-browser # Build only files to src-cordova
 ```
 ## IMPORTANT
 
@@ -78,7 +84,7 @@ In development mode (`npm run cordova-serve-*`), the plugin is starting the dev 
 It is doing this by:
 
 * Adding **cordova.js** to your **index.html**
-* Defining **process.env.CORDOVA_PLATFORM** to **android**, **ios**, **osx** or **browser**
+* Defining **process.env.CORDOVA_PLATFORM** to **android**, **browser**, **electron**, **ios**, or **osx**
 * Starting the Dev Server
 * Executing '**cordova clean**'
 * Executing '**cordova run platform**'
@@ -91,7 +97,7 @@ In production mode (`npm run cordova-build-*`), the plugin is building the app, 
 It is doing this by:
 
 * Adding **cordova.js** to your **index.html**
-* Defining **process.env.CORDOVA_PLATFORM** to **android**, **ios**, **osx** or **browser***
+* Defining **process.env.CORDOVA_PLATFORM** to **android**, **browser**, **electron**, **ios**, or **osx** 
 * Building the app, output to **/src-cordova/www**
 * Executing '**cordova clean**'
 * Executing '**cordova build platform  --release**'
